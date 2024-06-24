@@ -28,13 +28,19 @@ def realocar_memoria(memoria):
 def visualizar_memoria(memoria):
     print(tabulate([memoria], tablefmt="fancy_grid", numalign="left", stralign="left"))
 
+
+
 print("\n")
 print("Simulador de alocação de memória")
-print("Tamanho da memória: 40 blocos")
+tamanho_escolha = int(input("Escolha o tamanho da memória (20, 40, 60, 80): "))
+memoria = [0] * tamanho_escolha
+tamanho = memoria
+print("-----------------------------")
+print(f"Tamanho da memória: {tamanho_escolha} blocos")
 print("-----------------------------")
 
 # Inicialização da memória
-memoria = [0] * 40
+
 
 while True:
     visualizar_memoria(memoria)
